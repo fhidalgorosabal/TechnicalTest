@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IFilm } from 'src/app/data/interfaces/film.interface';
-import { ApiService } from 'src/app/data/services/api.service';
+import { FilmsService } from 'src/app/data/services/films.service';
 
 @Component({
   selector: 'app-films',
@@ -12,7 +12,7 @@ import { ApiService } from 'src/app/data/services/api.service';
 export class FilmsComponent implements OnInit {
   films: IFilm[] = [];
 
-  constructor(private service: ApiService, private router: Router, private aRouter: ActivatedRoute) { }
+  constructor(private filmsService: FilmsService, private router: Router, private aRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.aRouter.params.subscribe( res => {
@@ -25,7 +25,7 @@ export class FilmsComponent implements OnInit {
   }
 
   list() {
-    this.service.listFilms().subscribe( 
+    this.filmsService.listFilms().subscribe( 
       res => {
       this.films = res;
       },
@@ -36,7 +36,7 @@ export class FilmsComponent implements OnInit {
   }
 
   search(text: string) {
-    this.service.searchFilms(text).subscribe( 
+    this.filmsService.searchFilms(text).subscribe( 
       res => {
       this.films = res;
       },

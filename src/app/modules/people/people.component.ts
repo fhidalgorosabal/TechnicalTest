@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiService } from 'src/app/data/services/api.service';
+import { PeopleService } from 'src/app/data/services/people.service';
 
 @Component({
   selector: 'app-people',
@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/data/services/api.service';
 export class PeopleComponent implements OnInit {
   people: any[] = [];
 
-  constructor(private service: ApiService, private router: Router, private aRouter: ActivatedRoute) { }
+  constructor(private peopleService: PeopleService, private router: Router, private aRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.aRouter.params.subscribe( res => {
@@ -24,7 +24,7 @@ export class PeopleComponent implements OnInit {
   }
 
   list() {
-    this.service.listPeople().subscribe( 
+    this.peopleService.listPeople().subscribe( 
       res => {
       this.people = res;
       },
@@ -35,7 +35,7 @@ export class PeopleComponent implements OnInit {
   }
 
   search(text: string) {
-    this.service.searchPeople(text).subscribe( 
+    this.peopleService.searchPeople(text).subscribe( 
       res => {
       this.people = res;
       },
