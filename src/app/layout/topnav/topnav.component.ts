@@ -30,7 +30,7 @@ export class TopnavComponent implements OnInit {
 
   createLink() {
     const url = this.router.url.split('/');
-    const text = `${url[1]}/${this.textSearch}`;
+    const text = `${url[1]}/search/${this.textSearch}`;
     if (this.link1 && !this.link2 && !this.link3 && !this.link4) {
       localStorage.setItem('Link2', text);     
     } else if (this.link1 && this.link2 && !this.link3 && !this.link4) {

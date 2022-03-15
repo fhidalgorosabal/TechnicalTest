@@ -1,46 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 
-import { FilmsComponent } from './films/films.component';
-import { FilmComponent } from './films/film.component';
-import { PeopleComponent } from './people/people.component';
-import { PersonComponent } from './people/person.component';
-import { PlanetsComponent } from './planets/planets.component';
-import { SpeciesComponent } from './species/species.component';
-import { StarshipsComponent } from './starships/starships.component';
-import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HeightPipe } from './people/pipes/height.pipe';
-import { HomeworldPipe } from './people/pipes/homeworld.pipe';
-
-
+import { FilmsModule } from './films/films.module';
+import { PeopleModule } from './people/people.module';
+import { PlanetsModule } from './planets/planets.module';
+import { SpeciesModule } from './species/species.module';
+import { StarshipsModule } from './starships/starships.module';
+import { VehiclesModule } from './vehicles/vehicles.module';
 
 @NgModule({
-  declarations: [
-    FilmsComponent,
-    FilmComponent,
-    PeopleComponent,
-    PersonComponent,
-    PlanetsComponent,
-    SpeciesComponent,
-    StarshipsComponent,
-    VehiclesComponent,
-    HeightPipe,
-    HomeworldPipe
-  ],
+  declarations: [],
   imports: [
     CommonModule,
-    RouterModule
-  ],
-  exports: [
-    FilmsComponent,
-    FilmComponent,
-    PeopleComponent,
-    PersonComponent,
-    PlanetsComponent,
-    SpeciesComponent,
-    StarshipsComponent,
-    VehiclesComponent
+    RouterModule,
+    FilmsModule,
+    PeopleModule,
+    PlanetsModule,
+    SpeciesModule,
+    StarshipsModule,
+    VehiclesModule
   ]
 })
 export class ModulesModule { }
