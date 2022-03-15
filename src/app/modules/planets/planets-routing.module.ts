@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PlanetsComponent } from './planets/planets.component';
+import { PlanetsListComponent } from './planets-list/planets-list.component';
 
 const routes: Routes = [{ 
   path: '',
   children: [
-    { path: 'index', component: PlanetsComponent },
+    { path: 'index', component: PlanetsListComponent },
     { path: '**', redirectTo: 'index' }
   ]
 }

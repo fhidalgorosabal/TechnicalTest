@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { VehiclesRoutingModule } from './vehicles-routing.module';
 
-import { VehiclesComponent } from './vehicles/vehicles.component';
+import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
 
 @NgModule({
   declarations: [
-    VehiclesComponent
+    VehiclesListComponent
   ],
   imports: [
     CommonModule,

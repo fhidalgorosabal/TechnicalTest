@@ -3,12 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { PeopleService } from 'src/app/data/services/people.service';
 
 @Component({
-  selector: 'app-person',
-  templateUrl: './person.component.html',
+  selector: 'app-people-detail',
+  templateUrl: './people-detail.component.html',
   styles: [
   ]
 })
-export class PersonComponent implements OnInit {
+export class PeopleDetailComponent implements OnInit {
   id: number = 0;
   person: any = {};
 

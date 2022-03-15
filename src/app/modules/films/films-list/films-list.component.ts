@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PeopleService } from 'src/app/data/services/people.service';
+import { IFilm } from 'src/app/data/interfaces/film.interface';
+import { FilmsService } from 'src/app/data/services/films.service';
 
 @Component({
-  selector: 'app-people',
-  templateUrl: './people.component.html',
+  selector: 'app-films-list',
+  templateUrl: './films-list.component.html',
   styles: [
   ]
 })
-export class PeopleComponent implements OnInit {
-  people: any[] = [];
+export class FilmsListComponent implements OnInit {
+  films: IFilm[] = [];
 
-  constructor(private peopleService: PeopleService, private router: Router, private aRouter: ActivatedRoute) { }
+  constructor(private filmsService: FilmsService, private router: Router, private aRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.aRouter.params.subscribe( res => {
@@ -24,9 +25,9 @@ export class PeopleComponent implements OnInit {
   }
 
   list() {
-    this.peopleService.listPeople().subscribe( 
+    this.filmsService.listFilms().subscribe( 
       res => {
-      this.people = res;
+      this.films = res;
       },
       err => {
         console.log(err.message);
@@ -35,9 +36,9 @@ export class PeopleComponent implements OnInit {
   }
 
   search(text: string) {
-    this.peopleService.searchPeople(text).subscribe( 
+    this.filmsService.searchFilms(text).subscribe( 
       res => {
-      this.people = res;
+      this.films = res;
       },
       err => {
         console.log(err.message);
@@ -47,7 +48,7 @@ export class PeopleComponent implements OnInit {
 
   details(url: string) {
     let url_temp = url.split('/');
-    this.router.navigate(['/people', url_temp[5]]);
+    this.router.navigate(['/films', url_temp[5]]);
   }
 
 }

@@ -3,12 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { FilmsService } from 'src/app/data/services/films.service';
 
 @Component({
-  selector: 'app-film',
-  templateUrl: './film.component.html',
+  selector: 'app-film-detail',
+  templateUrl: './film-detail.component.html',
   styles: [
   ]
 })
-export class FilmComponent implements OnInit {
+export class FilmDetailComponent implements OnInit {
   id: number = 0;
   film: any = {};
 

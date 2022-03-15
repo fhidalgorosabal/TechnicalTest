@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FilmComponent } from './film/film.component';
-import { FilmsComponent } from './films/films.component';
+import { FilmDetailComponent } from './film-detail/film-detail.component';
+import { FilmsListComponent } from './films-list/films-list.component';
 
 const routes: Routes = [
   { 
     path: '',
     children: [
-      { path: 'index', component: FilmsComponent },
-      { path: 'search/:text', component: FilmsComponent },
-      { path: ':id', component: FilmComponent },
+      { path: 'index', component: FilmsListComponent },
+      { path: 'search/:text', component: FilmsListComponent },
+      { path: ':id', component: FilmDetailComponent },
       { path: '**', redirectTo: 'index' }
     ] 
   }

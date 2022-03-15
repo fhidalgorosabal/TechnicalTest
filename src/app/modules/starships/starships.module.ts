@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { StarshipsRoutingModule } from './starships-routing.module';
 
-import { StarshipsComponent } from './starships/starships.component';
+import { StarshipsListComponent } from './starships-list/starships-list.component';
 
 @NgModule({
   declarations: [
-    StarshipsComponent
+    StarshipsListComponent
   ],
   imports: [
     CommonModule,
     StarshipsRoutingModule
   ],
   exports: [
-    StarshipsComponent
+    StarshipsListComponent
   ]
 })
 export class StarshipsModule { }

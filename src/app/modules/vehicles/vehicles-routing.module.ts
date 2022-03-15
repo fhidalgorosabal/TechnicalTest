@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VehiclesComponent } from './vehicles/vehicles.component';
+import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
 
 const routes: Routes = [{ 
     path: '',
     children: [
-      { path: 'index', component: VehiclesComponent },
+      { path: 'index', component: VehiclesListComponent },
       { path: '**', redirectTo: 'index' }
     ]
   }

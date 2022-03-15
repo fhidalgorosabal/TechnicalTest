@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PeopleRoutingModule } from './people-routing.module';
 
-import { PeopleComponent } from './people/people.component';
-import { PersonComponent } from './person/person.component';
+import { PeopleListComponent } from './people-list/people-list.component';
+import { PeopleDetailComponent } from './people-detail/people-detail.component';
 
 import { HeightPipe } from './pipes/height.pipe';
 import { HomeworldPipe } from './pipes/homeworld.pipe';
@@ -12,8 +12,8 @@ import { HomeworldPipe } from './pipes/homeworld.pipe';
 
 @NgModule({
   declarations: [
-    PeopleComponent,
-    PersonComponent,
+    PeopleListComponent,
+    PeopleDetailComponent,
     HeightPipe,
     HomeworldPipe
   ],
@@ -22,8 +22,8 @@ import { HomeworldPipe } from './pipes/homeworld.pipe';
     PeopleRoutingModule
   ],
   exports: [
-    PeopleComponent,
-    PersonComponent
+    PeopleListComponent,
+    PeopleDetailComponent
   ]
 })
 export class PeopleModule { }

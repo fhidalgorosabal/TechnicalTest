@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { PlanetsRoutingModule } from './planets-routing.module';
 
-import { PlanetsComponent } from './planets/planets.component';
+import { PlanetsListComponent } from './planets-list/planets-list.component';
 
 @NgModule({
   declarations: [
-    PlanetsComponent
+    PlanetsListComponent
   ],
   imports: [
     CommonModule,
     PlanetsRoutingModule
   ],
   exports: [    
-    PlanetsComponent
+    PlanetsListComponent
   ]
 })
 export class PlanetsModule { }
