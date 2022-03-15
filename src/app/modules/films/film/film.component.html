@@ -1,13 +1,15 @@
-<div class="container">
-    <ul>
-        <li>Title: {{ film.title }}</li>        
-        <li>Episode_id:  {{ film.episode_id }}</li>        
-        <li>Opening_crawl:  {{ film.opening_crawl }}</li>        
-        <li>Director:  {{ film.director }}</li>
-        <li>Producer:  {{ film.producer }}</li>
-    </ul> 
-    
-    <div class="back">
-        <a routerLink="/films/index">Back</a>
-    </div>
+<div class="row">
+    <div class="col-md-9">
+        <h1>Film</h1>
+        <ul class="list-group">
+            <li class="list-group-item">Title: {{ film.title }}</li>        
+            <li class="list-group-item">Episode_id:  {{ film.episode_id }}</li>        
+            <li class="list-group-item">Opening_crawl:  {{ film.opening_crawl }}</li>        
+            <li class="list-group-item">Director:  {{ film.director }}</li>
+            <li class="list-group-item">Producer:  {{ film.producer }}</li>
+        </ul>    
+        <div class="mt-2 text-end">
+            <a class="btn btn-danger" routerLink="/films/index">Back</a>
+        </div>
+    </div>    
 </div>

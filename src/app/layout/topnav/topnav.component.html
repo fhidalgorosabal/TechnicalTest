@@ -1,12 +1,30 @@
-<div class="topnav">
-    <a *ngIf="link1" routerLink="{{ link1 }}" (click)="activatedLink(link1)">Search 1</a>
-    <a *ngIf="link2" routerLink="{{ link2 }}" (click)="activatedLink(link2)">Search 2</a>
-    <a *ngIf="link3" routerLink="{{ link3 }}" (click)="activatedLink(link3)">Search 3</a>
-    <a *ngIf="link4" routerLink="{{ link4 }}" (click)="activatedLink(link4)">Search 4</a>
-    <div class="search-container">
-      <form>
-        <input type="text" placeholder="Search.." name="search" [(ngModel)]="textSearch">
-        <button type="button" (click)="search()"><i class="fa fa-search"></i> Search</button>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Eighth navbar example">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" *ngIf="link1">
+          <a class="nav-link" routerLink="{{ link1 }}" (click)="activatedLink(link1)">Search 1</a>
+        </li>
+        <li class="nav-item" *ngIf="link2">
+          <a class="nav-link" routerLink="{{ link2 }}" (click)="activatedLink(link2)">Search 2</a>
+        </li>
+        <li class="nav-item" *ngIf="link3">
+          <a class="nav-link" routerLink="{{ link3 }}" (click)="activatedLink(link3)">Search 3</a>
+        </li>
+        <li class="nav-item" *ngIf="link4">
+          <a class="nav-link" routerLink="{{ link4 }}" (click)="activatedLink(link4)">Search 4</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search.." name="search" [(ngModel)]="textSearch">
+          <button type="button" class="btn btn-outline-success" (click)="search()"><i class="fa fa-search"></i> Search</button>
+        </div>        
       </form>
     </div>
-</div>
+  </div>
+</nav>

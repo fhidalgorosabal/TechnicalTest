@@ -1,8 +1,29 @@
-<div class="navbar">
-    <a routerLink="films/index">Films</a>
-    <a routerLink="people/index">People</a>
-    <a routerLink="planets/index">Planets</a>
-    <a routerLink="species/index">Species</a>
-    <a routerLink="starships/index">Starships</a>
-    <a routerLink="vehicles/index">Vehicles</a>
-</div>
+<nav nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="NavBar">
+  <div class="container">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarsExample04">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="films/index">Films</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="people/index">People</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="planets/index">Planets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="species/index">Species</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="starships/index">Starships</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="vehicles/index">Vehicles</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

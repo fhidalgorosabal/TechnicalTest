@@ -1,13 +1,15 @@
-<div class="container">
-    <ul>
-        <li>Name: {{ person.name }}</li>        
-        <li>Gender:  {{ person.gender }}</li>        
-        <li>Height:  {{ person.height | height }}</li>        
-        <li>Homeworld:  {{ person.homeworld | homeworld | async}}</li>
-        <li>Birth_year:  {{ person.birth_year }}</li>
-    </ul> 
-    
-    <div class="back">
-        <a routerLink="/people/index">Back</a>
-    </div>
+<div class="row">
+    <div class="col-md-9">
+        <h1>Person</h1>
+        <ul class="list-group">            
+            <li class="list-group-item">Name: {{ person.name }}</li>        
+            <li class="list-group-item">Gender:  {{ person.gender }}</li>        
+            <li class="list-group-item">Height:  {{ person.height | height }}</li>        
+            <li class="list-group-item">Homeworld:  {{ person.homeworld | homeworld | async}}</li>
+            <li class="list-group-item">Birth_year:  {{ person.birth_year }}</li>
+        </ul>    
+        <div class="mt-2 text-end">
+            <a class="btn btn-danger" routerLink="/people/index">Back</a>
+        </div>
+    </div>    
 </div>
