@@ -19,10 +19,10 @@ Este proyecto es una prueba técnica desarrollada en **Angular 12.2.10** y **Boo
 ![Listado de películas](src/assets/screenshot/films.png)
 
 ### Personas
-![Detalle de la persona](src/assets/screenshots/person_details.png)
+![Detalle de la persona](src/assets/screenshot/person_details.png)
 
 ### Búsqueda
-![Búsqueda de películas](src/assets/screenshots/search.png)
+![Búsqueda de películas](src/assets/screenshot/search.png)
 
 ---
 
