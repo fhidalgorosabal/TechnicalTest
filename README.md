@@ -1,27 +1,39 @@
-# Angular
+# Crealogix FE - Prueba Técnica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+Este proyecto es una prueba técnica desarrollada en **Angular 12.2.10** y **Bootstrap v5.0.2**. Su objetivo es consumir la **API de Star Wars** ([SWAPI](https://swapi.dev/documentation#intro)). La API brinda información sobre películas, personajes, planetas, especies, naves espaciales y vehículos de Star Wars.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalación y ejecución
 
-## Code scaffolding
+1. Clona este repositorio en tu máquina local `git clone https://github.com/fhidalgorosabal/swapi-technical-test.git`.
+2. Accede a la carpeta del proyecto `cd swapi-technical-test`.
+3. Ejecuta `npm install` para instalar los paquetes de node.
+4. Para iniciar la aplicación `ng serve` y accede en el navedador a `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Capturas de pantalla
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Películas
+![Listado de películas](src/assets/screenshot/films.png)
 
-## Running unit tests
+### Personas
+![Detalle de la persona](src/assets/screenshots/person_details.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Búsqueda
+![Búsqueda de películas](src/assets/screenshots/search.png)
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Autor
 
-## Further help
+Desarrollado por: Fernando Hidalgo Rosabal.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
+
+---
